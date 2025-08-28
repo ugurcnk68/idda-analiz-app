@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>İdda Kupon Üretici (iPhone için)</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="İdda Kupon">
+</head>
+<body>
+  <header>
+    <h1>İdda Kupon Üretici</h1>
+    <p class="muted">Basit, iPhone uyumlu—verileri elle gir veya örnekleri kullan. "Add to Home Screen" ile uygulama gibi kullan.</p>
+  </header>
+
+  <main>
+    <section id="controls">
+      <div class="row">
+        <label>Banko eşiği (model prob)</label>
+        <input id="bankoThreshold" type="number" min="0" max="1" step="0.01" value="0.65">
+      </div>
+      <div class="row">
+        <label>Değer farkı eşiği (model - implied)</label>
+        <input id="valueDiff" type="number" min="0" max="1" step="0.01" value="0.07">
+      </div>
+      <div class="row">
+        <button id="useSample">Örnek Maçları Yükle</button>
+        <button id="clearMatches">Temizle</button>
+      </div>
+    </section>
+
+    <section id="matchesSection">
+      <h2>Maçlar</h2>
+      <p class="muted">Her maça takımlar ve decimal odds gir. Ardından "Analiz Et" tuşuna bas.</p>
+      <div id="matches"></div>
+      <button id="addMatch">Maç Ekle</button>
+    </section>
+
+    <section id="resultsSection">
+      <h2>Sonuçlar</h2>
+      <button id="analyzeBtn">Analiz Et</button>
+      <div id="results"></div>
+      <div class="row">
+        <button id="exportJson">JSON Olarak Dışa Aktar</button>
+      </div>
+    </section>
+
+    <section id="instructions">
+      <h3>Kullanım & İndir</h3>
+      <ol>
+        <li>Sağ üstteki "Share" (Paylaş) butonuna basın ve "Add to Home Screen" seçin — uygulama gibi açılır.</li>
+        <li>Maçları elle girin veya "Örnek Maçları Yükle"ye basın.</li>
+        <li>"Analiz Et" ile banko ve value bahisleri görün.</li>
+        <li>Export ile JSON indirebilirsiniz.</li>
+      </ol>
+      <p class="muted">Not: Bu uygulama canlı bookmaker veri çekmez — odds'ları elle yapıştırmanız veya örnekleri kullanmanız gerekiyor. Gerçek API entegrasyonu için sunucu/anahtar gerekir.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Hazırlandı — İdda Kupon Üretici. Sorumluluk: Bahis risklidir.</p>
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>

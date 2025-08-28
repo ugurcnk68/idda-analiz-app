@@ -1,0 +1,18 @@
+*{box-sizing:border-box;font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{margin:0;background:#f7f7fb;color:#111;display:flex;flex-direction:column;min-height:100vh}
+header{background:#0b63a8;color:white;padding:14px 16px}
+h1{margin:0;font-size:20px}
+main{flex:1;padding:12px}
+.row{display:flex;gap:8px;align-items:center;margin:8px 0}
+input[type="text"], input[type="number"], select{flex:1;padding:8px;border-radius:8px;border:1px solid #ddd}
+button{background:#0b63a8;color:white;border:none;padding:10px 12px;border-radius:8px}
+button.secondary{background:#555}
+#matches{margin:8px 0;display:flex;flex-direction:column;gap:8px}
+.match{background:white;padding:10px;border-radius:10px;border:1px solid #e6e6ef}
+.match .row{margin:6px 0}
+.muted{opacity:0.85;font-size:13px}
+#results{margin-top:8px}
+.result-card{background:white;padding:10px;border-radius:10px;margin:6px 0;border:1px solid #e6e6ef}
+footer{padding:10px;text-align:center;font-size:13px;color:#666}
+label{width:140px;font-size:14px}
+@media (max-width:420px){label{width:110px}header h1{font-size:18px}}
